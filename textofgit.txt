@@ -1,0 +1,32 @@
+在git远程仓库中注册 码云  coding.net github.com  
+本地配置
+git config --global user.name "runoob"
+git config --global user.email test@runoob.com [本邮箱一定是要通过验证]
+git config --list 查看本地的配置信息
+
+第一次上传
+git init  [初始化]
+git status [查看本地的状态]
+git add .  [将本地代码 添加到待上传仓库]
+git commit -m '' [添加上传的注释]
+git remote add origin https:url [首次上传添加仓库]
+git push -u origin master  [首次上传命令]
+
+
+第二次上传
+git status
+git add .
+git commit -m '注释'
+git push  origin master
+
+
+
+git clone url  在互联网上或者远程仓库中克隆一个git仓库到当前目录下。
+git reset --hard 版本回退
+git reset  HEAD  命令用于取消缓存已缓存的内容。
+git pull origin master [下拉合并][因为是多人开发 所以每一次上传之前先下拉合并]
+解决冲突
+两个人同时修改了同一行代码  第一个人上传后成功  第二个人上传则会失败  这样就会冲突
+1 版本回退
+2 如果可以下拉 则下拉后修改代码
+注意:多人开发时一定要 多下拉 多上传 (每写一个小功能 或者每隔 N 分钟下拉 上传)
